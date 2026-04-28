@@ -1,0 +1,39 @@
+{
+  "name": "@commonwealth/communicator",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "bun@1.3.11",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "rsbuild dev --port 4201",
+    "build:web": "rsbuild build",
+    "build": "bun run build:web && bun run typecheck && bun run lint",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src package.json tsconfig.json rsbuild.config.ts biome.json README.md PRD.md PLAN.md",
+    "test": "bun test src",
+    "verify": "bun run typecheck && bun run lint && bun run build:web && bun test src"
+  },
+  "dependencies": {
+    "@rsbuild/core": "^1.7.5",
+    "@rsbuild/plugin-react": "^1.4.6",
+    "@tailwindcss/postcss": "^4.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.11.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.3.12",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^6.0.3"
+  }
+}

@@ -19,10 +19,19 @@ iOS wrapper for phone messaging.
 
 ## Current Status
 
-Documentation-first repo. Web messaging starts after Mainframe exposes the
-messaging API.
+React/TypeScript package skeleton is active. It exports `CommunicatorMount`
+with local draft/message state until Mainframe messaging contracts exist.
 
 ## Develop
 
-No package scripts are active yet. Planned web stack is React, TypeScript, Bun,
-Rsbuild, BiomeJS, and shadcn/ui.
+```sh
+bun install
+bun run dev
+bun run typecheck
+bun run lint
+bun run test
+bun run build
+```
+
+From the Commonwealth root, prefer `bun run dev:communicator` and the root
+verification scripts.

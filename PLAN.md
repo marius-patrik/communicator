@@ -2,7 +2,8 @@
 
 ## Current Implementation State
 
-Communicator currently contains documentation only.
+Communicator has a React/TypeScript package skeleton with `CommunicatorMount`
+and local draft/message state.
 
 ## Decisions Locked
 
@@ -12,12 +13,13 @@ Communicator currently contains documentation only.
 
 ## Next Milestone
 
-Create the web client package after Mainframe has messaging routes.
+Wire `CommunicatorMount` to Mainframe conversations, messages, participants,
+and realtime delivery after the messaging API contract lands.
 
 ## Implementation Phases
 
-1. Add package metadata and web tooling.
-2. Define conversation/message UI state.
+1. Add package metadata and web tooling. Done.
+2. Define conversation/message UI state. Started.
 3. Consume Mainframe messaging tRPC routes.
 4. Export `CommunicatorMount`.
 5. Add smoke tests for mounted web usage.
