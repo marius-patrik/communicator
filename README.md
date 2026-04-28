@@ -1,3 +1,3 @@
 # communicator
 
-Workspace for communication-related project files.
+Provider-agnostic messaging client that connects to mainframe.
